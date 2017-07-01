@@ -23,6 +23,10 @@ def _getDomains(url):
 	anchors = _getAnchors(soup)
 	return list(set(map(lambda a: a.get("href").replace("shop.", ""), anchors)))
 
+
+"""
+ПРАВИТЬ ЭТУ ФУНКЦИЮ ДЛЯ ПОЛУЧЕНИЯ НЕОБХОДИМЫХ ССЫЛОК
+"""
 def _getAnchors(soup):
 	anchors = soup.find("div", class_="article__content").find_all("a")[1:]
 	return filter(lambda a: not(a.get("href").find("leadpages") >= 0 or 
