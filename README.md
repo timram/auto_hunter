@@ -13,3 +13,6 @@ parser - это питоновский модуль, в котором долж�
 def getAnchors(soup):
 	return soup.find("div", class_="article__content").find_all("a")
 ```
+
+# Requirements
+python verion >= 3.1 
